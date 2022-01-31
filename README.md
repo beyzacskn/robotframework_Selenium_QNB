@@ -1,8 +1,5 @@
 # Robot Framework + Selenium example
-This is step by step guild-line to help you:
- * Setup environment for Robot Framework and Selenium
- * Setup text editor for editing test cases
- * Run a simple test case
+
 
 **Note**: I'll use Sublime Text 3 instead of Ride. Because it's just my favourite text editor.  
 
