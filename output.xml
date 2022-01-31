@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.7.2 on win32)" generated="20220131 18:07:31.990" rpa="false" schemaversion="2">
+<suite id="s1" name="Example" source="C:\Users\beyza\Downloads\robotframework-selenium\test-cases\example.robot">
+<test id="s1-t1" name="Search Google with &quot;Google Search&quot; button via Chrome">
+<kw name="Open Url With Chrome" library="keywords">
+<arg>${QNB_URL}</arg>
+<kw name="Open Url" library="keywords">
+<arg>Chrome</arg>
+<arg>${url}</arg>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220131 18:07:32.772" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220131 18:07:32.772" endtime="20220131 18:07:34.112"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220131 18:07:34.112" endtime="20220131 18:07:34.242"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220131 18:07:34.243" level="INFO">Opening url 'https://www.qnbfinansbank.com/'</msg>
+<status status="PASS" starttime="20220131 18:07:34.243" endtime="20220131 18:07:52.749"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return !!document.body</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220131 18:07:52.749" endtime="20220131 18:07:52.761"/>
+</kw>
+<status status="PASS" starttime="20220131 18:07:32.771" endtime="20220131 18:07:52.762"/>
+</kw>
+<status status="PASS" starttime="20220131 18:07:32.770" endtime="20220131 18:07:52.762"/>
+</kw>
+<kw name="Click Detayli Bilgi" library="QNBKeywords">
+<arg>${DETAIL_INFO}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DETAIL_INFO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220131 18:07:52.764" endtime="20220131 18:07:52.828"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DETAIL_INFO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:07:52.829" level="INFO">Clicking element 'xpath://a[@c-link='DetailInfo']'.</msg>
+<status status="PASS" starttime="20220131 18:07:52.828" endtime="20220131 18:08:32.696"/>
+</kw>
+<status status="PASS" starttime="20220131 18:07:52.763" endtime="20220131 18:08:32.697"/>
+</kw>
+<kw name="Input Kredi Tutari" library="QNBKeywords">
+<arg>${CALCULATE_BUTTON}</arg>
+<arg>${AMOUNT}</arg>
+<arg>${CREDITAMOUNT}</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${CALCULATE_BUTTON}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220131 18:08:32.701" endtime="20220131 18:08:33.018"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CREDITAMOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:33.019" level="INFO">Clicking element 'xpath://input[@c-model='CreditAmount']'.</msg>
+<status status="PASS" starttime="20220131 18:08:33.018" endtime="20220131 18:08:33.126"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CREDITAMOUNT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220131 18:08:33.126" endtime="20220131 18:08:33.159"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${CREDITAMOUNT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220131 18:08:33.159" endtime="20220131 18:08:33.221"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CREDITAMOUNT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220131 18:08:33.222" endtime="20220131 18:08:33.258"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CREDITAMOUNT}</arg>
+<arg>${AMOUNT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:33.259" level="INFO">Typing text '50000' into text field 'xpath://input[@c-model='CreditAmount']'.</msg>
+<status status="PASS" starttime="20220131 18:08:33.258" endtime="20220131 18:08:33.460"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:32.699" endtime="20220131 18:08:33.460"/>
+</kw>
+<kw name="Click Hesapla" library="QNBKeywords">
+<arg>${ROUTER_CALCULATE}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ROUTER_CALCULATE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220131 18:08:33.464" endtime="20220131 18:08:33.492"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ROUTER_CALCULATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:33.493" level="INFO">Clicking element 'xpath:(//button[contains(.,'Hesapla')])[1]'.</msg>
+<status status="PASS" starttime="20220131 18:08:33.492" endtime="20220131 18:08:33.611"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:33.463" endtime="20220131 18:08:33.612"/>
+</kw>
+<kw name="Click Odeme Planı" library="QNBKeywords">
+<arg>${PAYMENT_PLAN}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220131 18:08:34.623" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220131 18:08:33.614" endtime="20220131 18:08:34.624"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${PAYMENT_PLAN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220131 18:08:34.624" endtime="20220131 18:08:34.709"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PAYMENT_PLAN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:34.710" level="INFO">Clicking element 'xpath:(//button[@type='button'])[3]'.</msg>
+<status status="PASS" starttime="20220131 18:08:34.709" endtime="20220131 18:08:34.835"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:33.613" endtime="20220131 18:08:34.836"/>
+</kw>
+<kw name="Check Hesaplanan Tutar List" library="QNBKeywords">
+<arg>${TOTAL_AMOUNT}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${TOTAL_AMOUNT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220131 18:08:34.838" endtime="20220131 18:08:34.911"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TOTAL_AMOUNT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220131 18:08:34.950" level="INFO">Element 'xpath://div[@class='calculated-result animated fadeIn']' is displayed.</msg>
+<status status="PASS" starttime="20220131 18:08:34.911" endtime="20220131 18:08:34.950"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:34.837" endtime="20220131 18:08:34.951"/>
+</kw>
+<kw name="Click Hemen Basvur" library="QNBKeywords">
+<arg>${APPLY_CREDIT}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${APPLY_CREDIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:34.953" level="INFO">Clicking element 'xpath://a[@c-link='ApplyCredit']'.</msg>
+<status status="PASS" starttime="20220131 18:08:34.953" endtime="20220131 18:08:43.754"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:34.952" endtime="20220131 18:08:43.754"/>
+</kw>
+<kw name="Basvuru Formu" library="QNBKeywords">
+<arg>${TC}</arg>
+<arg>${BIRTHDAY}</arg>
+<arg>${PHONE_NUMBER}</arg>
+<arg>${APPLICATION_FORM}</arg>
+<arg>${TC_ELEMENT}</arg>
+<arg>${BIRTHDAY_ELEMENT}</arg>
+<arg>${PHONE_NUMBER_ELEMENT}</arg>
+<arg>${KVKK}</arg>
+<arg>${APPLICAON_TITLE}</arg>
+<arg>${CLOSE_WİNDOW}</arg>
+<arg>${PERSONAL_FINANCE_CREDIT}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${APPLICATION_FORM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220131 18:08:43.758" endtime="20220131 18:08:43.805"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220131 18:08:46.815" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220131 18:08:43.805" endtime="20220131 18:08:46.815"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TC_ELEMENT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220131 18:08:46.816" endtime="20220131 18:08:47.131"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TC_ELEMENT}</arg>
+<arg>${TC}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:47.132" level="INFO">Typing text '86214456680' into text field 'xpath://*[@id="CitizenshipNumber"]'.</msg>
+<status status="PASS" starttime="20220131 18:08:47.131" endtime="20220131 18:08:47.344"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BIRTHDAY_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:47.345" level="INFO">Clicking element 'xpath://*[@id="birthday"]'.</msg>
+<status status="PASS" starttime="20220131 18:08:47.344" endtime="20220131 18:08:47.458"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${BIRTHDAY_ELEMENT}</arg>
+<arg>${BIRTHDAY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:47.459" level="INFO">Typing text '08/05/2000' into text field 'xpath://*[@id="birthday"]'.</msg>
+<status status="PASS" starttime="20220131 18:08:47.459" endtime="20220131 18:08:47.563"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PHONE_NUMBER_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:47.564" level="INFO">Clicking element 'xpath://*[@id="MobilePhone"]'.</msg>
+<status status="PASS" starttime="20220131 18:08:47.563" endtime="20220131 18:08:47.669"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PHONE_NUMBER_ELEMENT}</arg>
+<arg>${PHONE_NUMBER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:47.670" level="INFO">Typing text '5394567890' into text field 'xpath://*[@id="MobilePhone"]'.</msg>
+<status status="PASS" starttime="20220131 18:08:47.669" endtime="20220131 18:08:47.796"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${KVKK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:47.797" level="INFO">Clicking element 'xpath://label[@for='chkKvkk']'.</msg>
+<status status="PASS" starttime="20220131 18:08:47.796" endtime="20220131 18:08:47.978"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${APPLICAON_TITLE}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220131 18:08:47.979" endtime="20220131 18:08:49.258"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CLOSE_WİNDOW}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220131 18:08:49.259" endtime="20220131 18:08:49.306"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLOSE_WİNDOW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:49.307" level="INFO">Clicking element 'xpath://a[@class='window-close ']'.</msg>
+<status status="PASS" starttime="20220131 18:08:49.307" endtime="20220131 18:08:49.399"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${PERSONAL_FINANCE_CREDIT}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220131 18:08:49.399" endtime="20220131 18:08:49.494"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:43.755" endtime="20220131 18:08:49.495"/>
+</kw>
+<kw name="Click Kredi Basvur" library="QNBKeywords">
+<arg>${PFC_SENT}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PFC_SENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220131 18:08:49.499" level="INFO">Clicking element 'xpath://a[@id='ihtiyackredisend']'.</msg>
+<status status="PASS" starttime="20220131 18:08:49.498" endtime="20220131 18:08:49.633"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:49.496" endtime="20220131 18:08:49.633"/>
+</kw>
+<kw name="Check Sms Screen" library="QNBKeywords">
+<arg>${SMS_SCREEN_CHECK}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SMS_SCREEN_CHECK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220131 18:08:49.636" endtime="20220131 18:08:54.468"/>
+</kw>
+<status status="PASS" starttime="20220131 18:08:49.636" endtime="20220131 18:08:54.469"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220131 18:08:54.470" endtime="20220131 18:08:56.712"/>
+</kw>
+<status status="PASS" starttime="20220131 18:07:32.768" endtime="20220131 18:08:56.713"/>
+</test>
+<doc>Search Google</doc>
+<status status="PASS" starttime="20220131 18:07:31.993" endtime="20220131 18:08:56.717"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Example">Example</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
