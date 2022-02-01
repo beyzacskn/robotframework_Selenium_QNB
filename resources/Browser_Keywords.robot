@@ -10,6 +10,3 @@ Open Url With Chrome
     [Arguments]     ${url}
     Open Url        Chrome    ${url}
 
-Open Url With Firefox
-    [Arguments]     ${url}
-    Open Url        Firefox    ${url}
