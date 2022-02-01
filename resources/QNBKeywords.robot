@@ -16,11 +16,9 @@ Basvuru Formu
     click element    ${CLOSE_WİNDOW}
     switch window   ${PERSONAL_FINANCE_CREDIT}
 
-
 Click Kredi Basvur
     [Arguments]     ${PFC_SENT}
     click element    ${PFC_SENT}
-
 
 Check Sms Screen
     [Arguments]     ${SMS_SCREEN_CHECK}

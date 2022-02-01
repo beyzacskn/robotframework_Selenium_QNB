@@ -3,16 +3,16 @@
 Input Kredi Tutari
     [Arguments]     ${CALCULATE_BUTTON}     ${AMOUNT}       ${CREDITAMOUNT}
     Scroll Element Into View    ${CALCULATE_BUTTON}
-    Click Element   ${CREDITAMOUNT}
     Wait Until Element Is Visible   ${CREDITAMOUNT}
+    Click Element   ${CREDITAMOUNT}
     Clear Element Text  ${CREDITAMOUNT}
     Wait Until Element Is Visible   ${CREDITAMOUNT}
     Input Text      ${CREDITAMOUNT}     ${AMOUNT}
 
 Click Hesapla
-    [Arguments]     ${ROUTER_CALCULATE}
-    wait until element is visible    ${ROUTER_CALCULATE}
-    click element    ${ROUTER_CALCULATE}
+    [Arguments]     ${CALCULATE_BUTTON}
+    wait until element is visible    ${CALCULATE_BUTTON}
+    click element    ${CALCULATE_BUTTON}
 
 Click Odeme Planı
     [Arguments]     ${PAYMENT_PLAN}
